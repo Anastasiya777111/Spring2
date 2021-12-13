@@ -1,6 +1,5 @@
 
 import React from "react";
-import cards from "./cardsArray";
 import CardForm from "./cardForm";
 
 const Cards=(props)=>{

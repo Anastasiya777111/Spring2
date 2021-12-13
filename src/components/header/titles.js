@@ -1,17 +1,15 @@
 import Articles from "./articles";
 
-function fun(){
-    document.querySelectorAll(".MenuCont").forEach(n => n.addEventListener("click", () => 
-    {n.querySelector(".dropdown").classList.toggle("active");
-    n.querySelector(".dropdownMenu").classList.toggle("active");
-    }))
-    }
-
-
 const Titles  = (props) => {
+    function dropMenu(){
+        document.querySelectorAll(".MenuCont").forEach((n, i) => {
+            if(i==props.menu.id){
+        n.querySelector(".dropdown").classList.toggle("active");
+        n.querySelector(".dropdownMenu").classList.toggle("active");
+        }})}
     if(props.menu.article){
     return(
-        <div className="MenuCont" onClick={fun}>
+        <div className="MenuCont" onClick={dropMenu}>
 <li className="menu"><span className="nav-link">{props.menu.headerElem}</span><div className="dropdownMenu" ></div>
 </li>
 <ul className="dropdown">

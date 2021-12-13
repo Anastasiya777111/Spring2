@@ -10,7 +10,7 @@ const Header = () => {
             <div className="container">
                <img className="logo" src={logo} alt='logoSpring' />
                <ul className="menuItems">
-                   {menu.map(el => {
+                   {menu.map((el) => {
                        return <Titles menu={el}/>
                    })}
                </ul>
@@ -27,6 +27,8 @@ const Header = () => {
     );
   }
   
+ 
+
  function hambClick(){
      const hamburger = document.querySelector(".hamburger");
      const displ1 = document.querySelector(".displ1");
@@ -38,5 +40,6 @@ const Header = () => {
         setTimeout(() => displ1.classList.remove("active"), 188)
       }
  }
- 
+
+
   export default Header;

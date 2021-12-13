@@ -3,7 +3,7 @@ import React from "react";
 import Cards from "../cards/Cards";
 import cardsArray from "../cards/cardsArray.js";
 
-function vibor(e){
+function choice(e){
   const props = cardsArray.filter(word =>
     word.title.toLowerCase().includes(e.target.value.toLowerCase())||
     word.desc.toLowerCase().includes(e.target.value.toLowerCase())
@@ -23,7 +23,7 @@ function vibor(e){
 const Search=()=>{
     return(
         <div className="mainSearchBox" onChange={(e)=>{
-          return vibor(e);
+          return choice(e);
         }}>
 
     <input

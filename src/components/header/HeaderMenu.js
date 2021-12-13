@@ -1,7 +1,7 @@
 const menu=[
     {
             headerElem: 'Why Spring',
-    
+            
             article:[
                 {
             headerSubElem: 'Overview',
@@ -39,7 +39,7 @@ const menu=[
     },
     {
         headerElem: 'Learn',
-    
+        
             article:[
                 {
             headerSubElem: 'Overview',
@@ -62,7 +62,7 @@ const menu=[
     
         {
             headerElem: 'Projects',
-    
+            
             article:[
                 {
             headerSubElem: 'Overview',
@@ -120,13 +120,15 @@ const menu=[
         },
         {
             headerElem: 'Training',
+           
         },
         {
             headerElem: 'Support',
+           
         },
         {
             headerElem: 'Community',
-        
+            
                 article:[
                     {
                 headerSubElem: 'Overview',
@@ -143,5 +145,8 @@ const menu=[
                 ],
             },
     ]
+    
+const NewMenu = menu.map((e, index)=>{return {...e, id: index}})
 
-    export default menu;
+
+    export default NewMenu;
