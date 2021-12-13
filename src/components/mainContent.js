@@ -1,11 +1,14 @@
 import Cards from "./cards/Cards.js";
-import Search from "./search/Search.js"
+import Search from "./search/Search.js";
+import cardsArray from "./cards/cardsArray.js";
 
 function MainContent() {
     return (
         <div className="mainContent">   
         <Search />
-        <Cards />
+        <div className="containerMain" id="mainCont">
+          <Cards props={cardsArray} />
+        </div>
         </div>
     );
   }

@@ -3,16 +3,16 @@ import React from "react";
 import cards from "./cardsArray";
 import CardForm from "./cardForm";
 
-const Cards=()=>{
-    return(
-        <div className="containerMain">
+const Cards=(props)=>{
+    console.log(props.props)
+    return(  
         <div className="displ1">
-        {cards.map(el=>{
+        {props.props.map(el=>{
+            console.log(el)
                         return <CardForm cards={el}/>
                     })}
 </div>
-</div>
     )
 }
-//return <Cards cards={result}/>
+
 export default Cards;
