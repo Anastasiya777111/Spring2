@@ -1,20 +1,19 @@
-import CardPict from "./pictureCards";
-import CardTitle from "./titleCards";
-import CardDesc from "./descriptionCards";
+import TitleCard from "./titleCard";
+import PictureCard from "./pictureCard";
+import DescriptionCard from "./descriptionCard";
 
 const cardForm = (props) => {
-return(
+  return (
     <a className="card shadow">
-    <div className="iconCard">
-            <CardPict cards={props.cards}/>
-    </div>
-    <div className="sizeTextCard">
-                <CardTitle cards={props.cards}/>
-               <CardDesc cards={props.cards}/>   
-    </div>
-</a>
-)
-}
+      <div className="iconCard">
+        <PictureCard card={props.card} />
+      </div>
+      <div className="sizeTextCard">
+        <TitleCard card={props.card} />
+        <DescriptionCard card={props.card} />
+      </div>
+    </a>
+  );
+};
 
 export default cardForm;
-
