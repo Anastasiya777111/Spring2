@@ -1,3 +1,4 @@
+import "./Header.css";
 import React, { useState } from "react";
 import menu from "./HeaderMenu";
 import logo from "../header/logo.svg";
@@ -7,17 +8,10 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   const hambClick = () => {
-    const displ1 = document.querySelector(".displ1");
     if (open) {
       setOpen(false);
     } else {
       setOpen(true);
-    }
-
-    if (!open) {
-      displ1.classList.add("active");
-    } else {
-      setTimeout(() => displ1.classList.remove("active"), 188);
     }
   };
 

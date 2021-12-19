@@ -1,0 +1,9 @@
+.displ1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .displ1.active{
+    display: none;
+  }

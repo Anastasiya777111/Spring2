@@ -1,10 +1,11 @@
+import "./Cards.css";
 import React from "react";
 import CardForm from "./cardForm";
 
-const Cards = (props) => {
+const Cards = (CardsElem) => {
   return (
     <div className="displ1">
-      {props.props.map((el) => {
+      {CardsElem.result.map((el) => {
         return <CardForm card={el} />;
       })}
     </div>

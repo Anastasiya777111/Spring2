@@ -1,7 +1,8 @@
+import "./titles.css";
 import Articles from "./articles";
 import React, { useState } from "react";
 
-const Titles = (props) => {
+const Titles = (elemOfTitle) => {
   const [openDrop, setOpenDrop] = useState(false);
 
   function dropMenu() {
@@ -11,16 +12,23 @@ const Titles = (props) => {
       setOpenDrop(true);
     }
   }
-  if (props.menu.article) {
+  if (elemOfTitle.menu.articles) {
     return (
       <div className="MenuCont" onClick={dropMenu}>
         <li className="menu">
-          <span className="nav-link">{props.menu.headerElem}</span>
+          <span className="nav-link">{elemOfTitle.menu.headerElem}</span>
           <div className={`dropdownMenu ${openDrop ? "active" : ""}`}></div>
         </li>
         <ul className={`dropdown ${openDrop ? "active" : ""}`}>
-          {props.menu.article.map((el) => {
-            return <Articles art={el} />;
+          {elemOfTitle.menu.articles.map((el, index) => {
+            if (elemOfTitle.menu.headerElem == "Projects") {
+              if (index == 9)
+                return (
+                  <Articles art={"allProjects elemDropdownMenu"} SubArt={el} />
+                );
+              if (index == 10) return <Articles art={"uppCase"} SubArt={el} />;
+            }
+            return <Articles art={"elemDropdownMenu"} SubArt={el} />;
           })}
         </ul>
       </div>
@@ -29,7 +37,7 @@ const Titles = (props) => {
     return (
       <div className="MenuCont">
         <li className="nav-link menu">
-          <span>{props.menu.headerElem}</span>
+          <span>{elemOfTitle.menu.headerElem}</span>
         </li>
       </div>
     );

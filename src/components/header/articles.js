@@ -1,7 +1,7 @@
 const Articles = (props) => {
   return (
-    <li className={props.art.elementClass}>
-      <a href="#">{props.art.headerSubElem}</a>
+    <li className={props.art}>
+      <a href="#">{props.SubArt.headerSubElem}</a>
     </li>
   );
 };

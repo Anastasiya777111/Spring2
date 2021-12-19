@@ -1,16 +1,17 @@
+import "./cardForm.css";
 import TitleCard from "./titleCard";
 import PictureCard from "./pictureCard";
 import DescriptionCard from "./descriptionCard";
 
-const cardForm = (props) => {
+const cardForm = (formOfCard) => {
   return (
     <a className="card shadow">
       <div className="iconCard">
-        <PictureCard card={props.card} />
+        <PictureCard linkToPicture={formOfCard.card} />
       </div>
       <div className="sizeTextCard">
-        <TitleCard card={props.card} />
-        <DescriptionCard card={props.card} />
+        <TitleCard linkToTitle={formOfCard.card} />
+        <DescriptionCard linkToDescription={formOfCard.card} />
       </div>
     </a>
   );

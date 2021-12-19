@@ -1,5 +1,5 @@
-const descriptionCard = (props) => {
-  return <p>{props.card.desc}</p>;
+const descriptionCard = (descriptionOfCard) => {
+  return <p>{descriptionOfCard.linkToDescription.desc}</p>;
 };
 
 export default descriptionCard;

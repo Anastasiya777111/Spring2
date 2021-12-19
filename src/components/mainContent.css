@@ -1,0 +1,22 @@
+.mainContent{
+    background-color: #ebf2f2;
+    padding: 50px 0;
+  }
+
+  
+.containerMain{
+    max-width: 900px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .noResults{
+    margin: 0% 40%;
+    font-size: 1.8rem;
+    }
+    
+    @media (max-width: 800px){
+      .noResults{
+          font-size: 1rem;
+      }
+      }
