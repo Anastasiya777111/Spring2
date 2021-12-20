@@ -1,9 +1,9 @@
-.displ1{
+.displayCards{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
   
-  .displ1.active{
+  .displayCards.active{
     display: none;
   }

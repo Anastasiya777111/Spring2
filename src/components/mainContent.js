@@ -1,28 +1,36 @@
 import "./mainContent.css";
 import Cards from "./cards/Cards.js";
 import Search from "./search/Search.js";
-import cardsArray from "./cards/cardsArray.js";
+import cards from "./cards/cardsArray.js";
+import { useState } from "react";
 
-function prov(e) {
-  const result = cardsArray.filter(
+
+
+
+const MainContent = () => {
+const [search, setSearch]=useState('');
+const [result, setResult]=useState([]);
+
+function filterCards() {
+  const result = cards.filter(
     (word) =>
-      word.title.toLowerCase().includes(e) ||
-      word.desc.toLowerCase().includes(e)
+      word.title.toLowerCase().includes(search) ||
+      word.desc.toLowerCase().includes(search)
   );
-  if (e === "" || typeof e === "object") {
-    return cardsArray;
+  if (search === "" || typeof search == 'undefined') {
+    return  setResult(cards);
   } else if (result.length !== 0) {
-    return result;
+    return setResult(result);
   }
-  return [];
+   return setResult([]);
 }
 
-const MainContent = (e) => {
+ setTimeout(filterCards, 300)
   return (
     <div className="mainContent">
-      <Search />
+      <Search search={search} setSearch={setSearch}/>
       <div className="containerMain" id="mainCont">
-        <Cards result={prov(e)} />
+        <Cards result={result} />
       </div>
     </div>
   );

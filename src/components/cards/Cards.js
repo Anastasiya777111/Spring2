@@ -3,13 +3,14 @@ import React from "react";
 import CardForm from "./cardForm";
 
 const Cards = (CardsElem) => {
-  return (
-    <div className="displ1">
+  return CardsElem.result.length ? (
+    <div className="displayCards">
       {CardsElem.result.map((el) => {
         return <CardForm card={el} />;
       })}
-    </div>
-  );
+    </div>) :
+    <p className="noResults">No Results</p>
+  
 };
 
 export default Cards;
