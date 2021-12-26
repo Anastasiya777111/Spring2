@@ -1,0 +1,141 @@
+.navMenu{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #ebf2f2;
+  }
+  
+  @media (max-width: 1200px) and (min-width: 900px){
+    .navMenu{
+    padding-right: 20px;
+  }
+  }
+  
+  @media (max-width: 900px){
+    .navMenu {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #ebf2f2;
+  }
+  }
+  
+  .container{
+    display: flex;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  .logo{
+    height: 48px;
+    max-width: 250px;
+  }
+  
+  @media (max-width: 1100px){ 
+    .logo {
+    height: 30px;
+  }
+  }
+  
+  .headerLogo{
+    display: block;
+  }
+  
+  .menuItems{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    width: 700px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+.elemDropdownMenu{
+    clear: both;
+    width: 100%;
+    padding: 5px;
+  }
+  
+  .elemDropdownMenu:hover{
+      color: green;
+  }
+  
+  .allProjects{
+    display: inline-block;
+    color: blue;
+    margin-bottom: 20px;
+    
+  }
+  
+  .uppCase{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+  
+  .smallVersion{
+    display: none;
+  }
+
+  @media (max-width: 900px){
+    .smallVersion {
+    display: block;
+    position: fixed;
+    right: 15px;
+    top: 8px;
+  }
+  }
+
+  @media (max-width: 900px){
+
+  .hamburger {
+    padding: 10px;
+  }
+  .hamburger.active .burger:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .burger:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    background:#fff;
+  }
+  .hamburger.active .burger:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    background:#fff;
+  }
+  
+  .menuItems{
+    display: flex;
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+    left: -100%;
+    top: 0px;
+    flex-direction: column;
+    background-color: #262626;
+   align-items: start;
+   padding: 80px 60px 60px 40px;
+    transition: 0.3s;
+    box-sizing: border-box;
+  }
+  
+  .menuItems.active{
+    left: 0;
+  }
+  
+}
+  
+.burger {
+    display: block;
+    width: 19px;
+    height: 3px;
+    background: #191e1e;
+    margin: 0 0 5px;
+  }
